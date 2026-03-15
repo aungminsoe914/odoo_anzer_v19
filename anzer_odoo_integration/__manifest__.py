@@ -1,31 +1,68 @@
+# -*- coding: utf-8 -*-
 {
-    'name': "anzer_odoo_integration",
+    'name': 'GTS Anzer Odoo Integration',
 
-    'summary': "Short (1 phrase/line) summary of the module's purpose",
+    'summary': 'Integration module for synchronizing accounting, products, contacts, and assets with external systems.',
 
     'description': """
-Long description of module's purpose
-    """,
+GTS Anzer Odoo Integration
+==========================
 
-    'author': "Aung Min Soe",
-    'website': "https://gtsolutionsmyanmar.com/",
+This module is developed by Glow Together Solutions Co., Ltd (GTS) to integrate
+Odoo with external systems such as Anzer or other third-party platforms.
 
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
-    # for the full list
-    'category': 'Uncategorized',
+Main Features
+-------------
+* Integration with external accounting systems
+* Synchronization of:
+    - Products
+    - Customers / Contacts
+    - Journals
+    - Taxes
+    - Accounts
+    - Accounting Moves
+    - Assets
+* Custom integration configuration
+* Integration line management
+* Secure data exchange between systems
+
+Benefits
+--------
+* Automates accounting data flow
+* Reduces manual data entry
+* Improves financial accuracy
+* Enables scalable system integration
+
+Technical Information
+---------------------
+Developed using Odoo framework best practices and designed for
+extensibility and future integrations.
+
+Company
+-------
+Glow Together Solutions Co., Ltd (GTS)
+Website: https://gtsolutionsmyanmar.com
+""",
+
+    'author': 'Aung Min Soe',
+    'company': 'Glow Together Solutions Co., Ltd',
+    'maintainer': 'Glow Together Solutions Co., Ltd',
+    'website': 'https://gtsolutionsmyanmar.com',
+
+    'category': 'Accounting/Accounting',
     'version': '0.1',
+    'license': 'LGPL-3',
 
-    # any module necessary for this one to work correctly
-    'depends': ['base', 'account', 'account_asset', 'analytic'],
+    'depends': [
+        'base',
+        'account',
+        'account_asset',
+        'analytic',
+    ],
 
-
-    # always loaded
     'data': [
         # Security
         'security/ir.model.access.csv',
-
-        # Data
 
         # Actions
         'views/action.xml',
@@ -33,10 +70,10 @@ Long description of module's purpose
         # Menus
         'views/menu.xml',
 
-        # Search
+        # Search Views
         'views/search.xml',
 
-        # Views
+        # Main Views
         'views/cl_asset.xml',
         'views/cl_product.xml',
         'views/cl_contact.xml',
@@ -47,9 +84,12 @@ Long description of module's purpose
         'views/cl_account_journal.xml',
         'views/cl_account_integration_line.xml',
     ],
-    # only loaded in demonstration mode
+
     'demo': [
         'demo/demo.xml',
     ],
-}
 
+    'installable': True,
+    'application': False,
+    'auto_install': False,
+}
