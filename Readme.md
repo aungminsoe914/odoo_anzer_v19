@@ -97,7 +97,7 @@ Clone the repository:
 
 ```bash
 cd /home
-git clone https://github.com/YOUR_REPOSITORY/gts_anzer_odoo_integration.git
+git clone https://github.com/aungminsoe914/odoo_anzer_v19.git
 ```
 
 ---
