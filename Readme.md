@@ -107,13 +107,13 @@ git clone https://github.com/aungminsoe914/odoo_anzer_v19.git
 Example:
 
 ```bash
-mv gts_anzer_odoo_integration /home/odoo/addons/
+mv anzer_odoo_integration /home/odoo/addons/
 ```
 
 OR if using custom addons path:
 
 ```bash
-mv gts_anzer_odoo_integration /home/odoo/customaddons/
+mv anzer_odoo_integration /home/odoo/customaddons/
 ```
 
 ---
